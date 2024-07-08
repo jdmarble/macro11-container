@@ -1,4 +1,4 @@
-FROM docker.io/library/debian:12.5-slim as builder
+FROM docker.io/library/debian:12.6-slim as builder
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
  && apt-get install -y --no-install-recommends \
@@ -11,7 +11,7 @@ RUN mkdir /macro11 \
  && git clone --depth 1 --branch macro11-v0.9 https://gitlab.com/Rhialto/macro11.git /macro11 \
  && make -C /macro11
 
-FROM docker.io/library/debian:12.5-slim
+FROM docker.io/library/debian:12.6-slim
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
  && apt-get install -y --no-install-recommends \
  perl=5.36.0-7+deb12u1\
