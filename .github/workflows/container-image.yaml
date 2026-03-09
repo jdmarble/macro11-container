@@ -20,7 +20,7 @@ jobs:
     steps:
       # To add emulation support to be able to build against more platforms.
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+        uses: docker/setup-qemu-action@v4
 
       # Will create a builder using by default the docker-container driver.
       # Not required but recommended to be able to build multi-platform
